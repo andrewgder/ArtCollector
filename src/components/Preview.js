@@ -13,7 +13,7 @@ const Preview = (props) => {
    *
    * You need info, records, setSearchResults, setFeaturedResult, and setIsLoading as available constants
    */
-  const { setSearchResults, searchResults, setFeatureResult, setIsLoading } =
+  const { setSearchResults, searchResults, setFeaturedResult, setIsLoading } =
     props;
   const { info, records } = searchResults;
   const { prev, next } = info || {};
@@ -82,7 +82,7 @@ const Preview = (props) => {
                   // prevent the default
                   // set the featured result to be this record, using setFeaturedResult
                   event.preventDefault();
-                  setFeatureResult(record);
+                  setFeaturedResult(record);
                 }}
               >
                 {
