@@ -39,11 +39,11 @@ const Searchable = (props) => {
           event.preventDefault();
           setIsLoading(true);
           try {
-            const result = await fetchQueryResultsFromTermAndValue({
+            const searchResults = await fetchQueryResultsFromTermAndValue(
               searchTerm,
-              searchValue,
-            });
-            setSearchResults(result);
+              searchValue
+            );
+            setSearchResults(searchResults);
           } catch (err) {
             console.error(err);
           } finally {
